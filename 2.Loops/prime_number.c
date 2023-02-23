@@ -1,0 +1,27 @@
+//print prime number in the given range 1 to n
+
+void main()
+{
+	int num,i,count,n;
+	printf("Enter Ending range:\n");
+	scanf("%d",&n);
+	
+	printf("Prime Numbers in given range from 1 to %d are:",n);
+	
+	for(num=1;num<=n;num++)
+	{
+		count=0;
+		
+		for(i=2;i<=num/2;i++)
+		{
+			if(num%i==0)
+			{
+				count++;
+				break;
+			}
+		}
+		if(count==0 && num!=1)
+		printf("\n%d",num);
+	}
+	
+}
